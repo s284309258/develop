@@ -1,0 +1,11 @@
+syntax = "proto2";
+package netty_studio;
+
+option java_package="protos";
+option java_outer_classname="datainfo";
+
+message Student{
+	optional string name = 1;
+	optional int32 age=2;
+	optional string address=3;
+}

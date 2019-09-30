@@ -1,0 +1,14 @@
+syntax = "proto3";
+package protostudio;
+option java_package="protostudio";
+option java_outer_classname="StudentProto";
+
+service StudentService{
+    rpc getRealNameByUsername(MyRequest) returns (MyResponse){}
+}
+message MyRequest{
+    string username=1;
+}
+message MyResponse{
+    string realname=2;
+}

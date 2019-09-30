@@ -1,0 +1,42 @@
+syntax = "proto2";
+package netty_studio;
+
+option java_package="protos";
+option java_outer_classname="proto_simple";
+
+message MySimple{
+	
+	enum DataType{
+		simpleType = 1;
+		simple_no1Type = 2;
+		simple_no2Type = 3;
+	}
+	
+	required DataType data_type=1;
+	
+	oneof dataBody{
+		simple s1 = 2;
+		simple_no1 s2 = 3;
+		simple_no2 s3 = 4;
+	}
+	
+	
+}
+
+message simple{
+	optional string name=1;
+	optional string address=2;
+	optional int32 age=3;
+}
+
+message simple_no1{
+	optional string name=1;
+	optional string address=2;
+}
+
+message simple_no2{
+	optional string mytel=1;
+	optional string name=2;
+	optional string address=3;
+	optional string myheight=4;
+}
